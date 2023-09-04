@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '123',
+  password: 'password',
   database: 'iot',
 });
 db.connect((err) => {
