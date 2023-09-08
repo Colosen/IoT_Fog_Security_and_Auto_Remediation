@@ -70,9 +70,6 @@ input_callback() {
   }
   printf("\n");
 
-  // printing link stats
-
-
   /* Printing individual bytes of the packet */
   for(i = 0; i < datalen; i++) {
     printf("%02x ", ((uint8_t *)packetbuf_dataptr())[i]);
