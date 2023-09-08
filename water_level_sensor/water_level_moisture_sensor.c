@@ -145,27 +145,6 @@ PROCESS_THREAD(udp_client_process, ev, data)
       }
     }
 
-  // // Get parent IP addr and print it
-  // const uip_ipaddr_t *parent_ip = rpl_get_parent_ipaddr();
-  // printf("Parent IP address: ");
-  // uip_debug_ipaddr_print(parent_ip);
-  // printf("\n");
-
-  /* Printing neighbours */
-  // uip_ds6_route_t *route = uip_ds6_route_head();
-  // while(route != NULL) {
-  //   printf("%d", *route);
-  //   route = uip_ds6_route_next(route);
-  //   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer_2));
-  // }
-
-  // while(1) {
-  //   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer_2));
-  //   rpl_neighbor_print_list("\0");
-  // }
-
-  // rpl_neighbor_print_list("\0");
-
     /* Add some jitter */
     etimer_set(&periodic_timer, SEND_INTERVAL
       - CLOCK_SECOND + (random_rand() % (2 * CLOCK_SECOND)));
